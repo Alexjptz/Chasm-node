@@ -211,7 +211,7 @@ EOF
             #Starting Node
             echo -e "\e[33mЗапускаем ноду (Starting node)...\e[0m"
             sleep 1
-            if sudo docker run -d --restart=always --env-file ./ChasmNode/.env -p 3001:3001 --name scout chasmtech/chasm-scout; then
+            if docker run -d --restart=always --env-file /root/ChasmNode/.env -p 3001:3001 --name scout chasmtech/chasm-scout; then
                 sleep 1
                 echo -e "\e[32mНода запущена (Node is running)!!!!\e[0m"
                 echo ""
